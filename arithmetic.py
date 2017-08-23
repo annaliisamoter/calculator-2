@@ -1,14 +1,22 @@
 """Math functions for calculator."""
 
 
-def add(num1, num2):
-    """Return the sum of the two input integers."""
-    return int(num1 + num2)
+def add(numbers):
+    """Return the sum of the input integers."""
+    total = 0
+    for num in numbers:
+        total += int(num)
+    return total
 
 
-def subtract(num1, num2):
+def subtract(numbers):
     """Return the second number subtracted from the first."""
-    return int(num1 - num2)
+    total = int(numbers[0])
+    if len(numbers) > 1:
+        new_numbers = numbers[1:]
+        for num in new_numbers:
+            total = total - num
+    return total
 
 
 def multiply(num1, num2):

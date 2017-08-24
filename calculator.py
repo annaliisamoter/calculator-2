@@ -8,6 +8,7 @@ from arithmetic import *
 
 
 def is_all_nums(numbers_strings):
+    """Checks that inputs after the command are numbers."""
     for num in numbers_strings:
         try:
             num = int(num)
@@ -18,6 +19,7 @@ def is_all_nums(numbers_strings):
 
 
 def run_command(command):
+    """Validates and runs calculator commands."""
     if command == '+':
         print add(numbers)
 

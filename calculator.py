@@ -7,6 +7,15 @@ calculator program yourself in this file.
 from arithmetic import *
 
 
+def is_all_nums(numbers_strings):
+    for num in numbers_strings:
+        try:
+            num = int(num)
+        except ValueError:
+            print "You must enter numbers after the command. Please try again."
+            return False
+    return True
+
 while True:
     input = raw_input("> ").rstrip()
     output = input.split(" ")
@@ -14,7 +23,7 @@ while True:
     command = output[0]
 
     if command == 'q' or command == 'quit':
-                break
+        break
 
     if len(output) <= 1:
         print "We need at least one number to run a function."
@@ -22,16 +31,7 @@ while True:
     if len(output) >= 2:
         numbers_strings = output[1:]
 
-        is_all_nums = True
-        for num in numbers_strings:
-            try:
-                num = int(num)
-            except ValueError:
-                print "You must enter numbers after the command. Please try again."
-                is_all_nums = False
-                break
-
-        if is_all_nums is True:
+        if is_all_nums(numbers_strings) is True:
             numbers = []
             for num in numbers_strings:
                 numbers.append(int(num))
@@ -68,5 +68,3 @@ while True:
 
             else:
                 print "That's not a valid command! Please try again."
-
-

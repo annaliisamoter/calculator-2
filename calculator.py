@@ -7,24 +7,19 @@ calculator program yourself in this file.
 from arithmetic import *
 
 
-# def validate_output(output):
-#     # for item in output[1:]:
-#     #     if item.isdigit() != True:
-#     #         print "That is not a valid entry! Please try again."
-#     if output == '+':
-#         return False
-#     return True
-
-
 while True:
     input = raw_input("> ").rstrip()
     output = input.split(" ")
 
     command = output[0]
-   # validate_output(output) is False:
-        #print "Invalid entry. Please try again."
 
-    if len(output) > 1:
+    if command == 'q' or command == 'quit':
+                break
+
+    if len(output) <= 1:
+        print "We need at least one number to run a function."
+
+    if len(output) >= 2:
         numbers_strings = output[1:]
 
         is_all_nums = True
@@ -74,5 +69,4 @@ while True:
             else:
                 print "That's not a valid command! Please try again."
 
-    if command == 'q' or command == 'quit':
-                break
+

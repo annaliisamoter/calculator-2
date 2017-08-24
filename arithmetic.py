@@ -11,6 +11,9 @@ def add(numbers):
 
 def subtract(numbers):
     """Return the total of integers subracted from the first."""
+    if len(numbers) < 2:
+        return "You need at least two numbers to run this function."
+
     total = numbers[0]
     if len(numbers) > 1:
         new_numbers = numbers[1:]
@@ -39,11 +42,15 @@ def divide(numbers):
 
 def square(numbers):
     """Return the square of the input."""
+    if len(numbers) != 1:
+        return "This function can only take one number."
     return numbers[0] * numbers[0]
 
 
 def cube(numbers):
     """Return the cube of the input."""
+    if len(numbers) != 1:
+        return "This function can only take one number."
     return numbers[0] * numbers[0] * numbers[0]
 
 
@@ -70,4 +77,6 @@ def add_mult(numbers):
 
 def add_cubes(numbers):
     """Cubes both inputs and returns sum"""
+    if len(numbers) != 2:
+        return "You need exactly 2 numbers to make this function work."
     return (numbers[0] ** 3) + (numbers[1] ** 3)

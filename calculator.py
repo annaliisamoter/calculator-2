@@ -16,6 +16,42 @@ def is_all_nums(numbers_strings):
             return False
     return True
 
+
+def run_command(command):
+    if command == '+':
+        print add(numbers)
+
+    elif command == '-':
+        print subtract(numbers)
+
+    elif command == '*':
+        print multiply(numbers)
+
+    elif command == '/':
+        print divide(numbers)
+
+    elif command == 'square':
+        print square(numbers)
+
+    elif command == 'cube':
+        print cube(numbers)
+
+    elif command == 'pow':
+        print power(numbers)
+
+    elif command == 'mod':
+        print mod(numbers)
+
+    elif command == 'x+':
+        print add_mult(numbers)
+
+    elif command == 'cubes+':
+        print add_cubes(numbers)
+
+    else:
+        print "That's not a valid command! Please try again."
+
+
 while True:
     input = raw_input("> ").rstrip()
     output = input.split(" ")
@@ -36,35 +72,4 @@ while True:
             for num in numbers_strings:
                 numbers.append(int(num))
 
-            if command == '+':
-                print add(numbers)
-
-            elif command == '-':
-                print subtract(numbers)
-
-            elif command == '*':
-                print multiply(numbers)
-
-            elif command == '/':
-                print divide(numbers)
-
-            elif command == 'square':
-                print square(numbers)
-
-            elif command == 'cube':
-                print cube(numbers)
-
-            elif command == 'pow':
-                print power(numbers)
-
-            elif command == 'mod':
-                print mod(numbers)
-
-            elif command == 'x+':
-                print add_mult(numbers)
-
-            elif command == 'cubes+':
-                print add_cubes(numbers)
-
-            else:
-                print "That's not a valid command! Please try again."
+            run_command(command)

@@ -56,8 +56,8 @@ def power(numbers):
 
 def mod(numbers):
     """Return the remainder of first number divided by second number."""
-    # if len(numbers) > 2:
-    #     return "That's too many numbers for this function!"
+    if len(numbers) > 2:
+        return "That's too many numbers for this function!"
     return numbers[0] % numbers[1]
 
 

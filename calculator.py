@@ -8,7 +8,7 @@ from arithmetic import *
 
 
 while True:
-    input = raw_input("> ")
+    input = raw_input("> ").rstrip()
     output = input.split(" ")
 
     command = output[0]
@@ -18,15 +18,6 @@ while True:
         numbers = []
         for num in numbers_strings:
             numbers.append(int(num))
-
-    # if len(output) > 1:
-    #     num1 = int(output[1])
-
-    # if len(output) > 2:
-    #     num2 = int(output[2])
-
-    # if len(output) > 3:
-    #     num3 = int(output[3])
 
     if command == 'q' or command == 'quit':
         break

@@ -49,20 +49,22 @@ def cube(numbers):
 
 def power(numbers):
     """Raise the first number to the power of the second number and return the value."""
-    if len(numbers) > 2:
-        return "That's too many numbers for this function!"
+    if len(numbers) != 2:
+        return "You need exactly 2 numbers to make this function work."
     return numbers[0] ** numbers[1]
 
 
 def mod(numbers):
     """Return the remainder of first number divided by second number."""
-    if len(numbers) > 2:
-        return "That's too many numbers for this function!"
+    if len(numbers) != 2:
+        return "You need exactly 2 numbers to make this function work."
     return numbers[0] % numbers[1]
 
 
 def add_mult(numbers):
     """Add first two inputs and multiply sum with third"""
+    if len(numbers) != 3:
+        return "You need exactly 3 numbers to make this function work."
     return (numbers[0] + numbers[1]) * numbers[2]
 
 

@@ -61,11 +61,11 @@ def mod(numbers):
     return numbers[0] % numbers[1]
 
 
-def add_mult(num1, num2, num3):
+def add_mult(numbers):
     """Add first two inputs and multiply sum with third"""
-    return int((num1 + num2) * num3)
+    return (numbers[0] + numbers[1]) * numbers[2]
 
 
-def add_cubes(num1, num2):
+def add_cubes(numbers):
     """Cubes both inputs and returns sum"""
-    return int((num1 ** 3) + (num2 ** 3))
+    return (numbers[0] ** 3) + (numbers[1] ** 3)
